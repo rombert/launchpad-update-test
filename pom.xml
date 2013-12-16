@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>launchpad-update-test</artifactId>
+    <name>Launchpad update test</name>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>maven-launchpad-plugin</artifactId>
+                <version>2.2.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <includeDefaultBundles>false</includeDefaultBundles>
+                    <jarWebSupport>
+                        <groupId>org.apache.felix</groupId>
+                        <artifactId>org.apache.felix.http.jetty</artifactId>
+                        <version>2.2.2</version>
+                    </jarWebSupport>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>prepare-launchpad</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>prepare-package</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+	                 <configuration>
+	                     <archive>
+	                         <manifest>
+	                             <!-- Don't reuse existing manifest, see https://github.com/tesla/m2eclipse-extras/issues/10 -->
+	                         	 <mainClass>org.apache.sling.launchpad.app.Main</mainClass>
+	                             <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+	                         </manifest>
+	                     </archive>
+	                 </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.launchpad.base</artifactId>
+            <version>2.5.0</version>
+            <scope>provided</scope>
+            <classifier>app</classifier>
+        </dependency>
+    </dependencies>
+</project>

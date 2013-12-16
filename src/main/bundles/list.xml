@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<bundles>
+    <!-- bootstrap bundles, must allow the installer core to start -->
+    <startLevel level="boot">
+        <bundle>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.6.4</version>
+        </bundle>
+        <bundle>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.commons.log</artifactId>
+            <version>3.0.2</version>
+        </bundle>
+        <bundle>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.commons.logservice</artifactId>
+            <version>1.0.2</version>
+        </bundle>
+        <bundle>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>1.6.4</version>
+        </bundle>
+        <bundle>
+            <groupId>org.slf4j</groupId>
+            <artifactId>log4j-over-slf4j</artifactId>
+            <version>1.6.4</version>
+        </bundle>
+        <bundle>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.settings</artifactId>
+            <version>1.3.0</version>
+        </bundle>
+        <bundle>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.fragment.xml</artifactId>
+            <version>1.0.2</version>
+        </bundle>
+        <bundle>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.fragment.transaction
+            </artifactId>
+            <version>1.0.0</version>
+        </bundle>
+        <bundle>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.javax.activation</artifactId>
+            <version>0.1.0</version>
+        </bundle>
+        <bundle>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.fragment.ws</artifactId>
+            <version>1.0.2</version>
+        </bundle>
+        <bundle>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.launchpad.installer
+            </artifactId>
+            <version>1.2.0</version>
+        </bundle>
+        <bundle>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.installer.core</artifactId>
+            <version>3.4.6</version>
+        </bundle>
+        <bundle>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.installer.api</artifactId>
+            <version>1.0.0</version>
+        </bundle>
+        <bundle>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.installer.provider.file</artifactId>
+            <version>1.0.2</version>
+        </bundle>
+        <bundle>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.configadmin</artifactId>
+            <version>1.6.0</version>
+        </bundle>
+        <bundle>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.eventadmin</artifactId>
+            <version>1.3.2</version>
+        </bundle>        
+    </startLevel>
+
+    <!-- OSGi infrastructure -->
+    <startLevel level="5">
+        <bundle>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.enterprise</artifactId>
+            <version>4.2.0</version>
+        </bundle>
+        <bundle>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.scr</artifactId>
+            <version>1.8.0</version>
+        </bundle>
+        <bundle>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.metatype</artifactId>
+            <version>1.0.8</version>
+        </bundle>
+    </startLevel>
+    
+    <!-- Shared utilities -->
+    <startLevel level="10">
+        <bundle>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.3</version>
+        </bundle>
+        <bundle>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.4</version>
+        </bundle>        
+        <bundle>
+            <groupId>org.apache.geronimo.bundles</groupId>
+            <artifactId>json</artifactId>
+            <version>20090211_1</version>
+        </bundle>
+        <!-- Uncomment to test addition of a new jar
+        <bundle>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>2.3.20</version>
+        </bundle>
+         -->
+    </startLevel>
+    
+    <!-- Auxiliary services -->
+    <startLevel level="20">
+        <bundle>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.webconsole</artifactId>
+            <version>4.2.0</version>
+        </bundle>
+        <bundle>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.webconsole.plugins.ds</artifactId>
+            <version>1.0.0</version>
+        </bundle>
+        <bundle>
+        	<groupId>org.apache.sling</groupId>
+        	<artifactId>org.apache.sling.installer.console</artifactId>
+        	<version>1.0.0</version>
+        </bundle>
+    </startLevel>
+</bundles>
